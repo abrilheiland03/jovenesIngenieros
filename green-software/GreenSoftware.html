@@ -9,6 +9,7 @@
   <!-- Google Fonts para estilo moderno -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../responsive.css" />
   <style>
     .hero-section {
       background: linear-gradient(135deg, #17a2b8 0%, #20c997 100%);
@@ -96,6 +97,90 @@
       padding: 20px;
       margin: 15px 0;
       font-family: 'Courier New', monospace;
+    }
+    
+    /* Estilos responsive para Green Software */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 80px 0 60px 0;
+      }
+      
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-section .lead {
+        font-size: 1rem;
+      }
+      
+      .feature-card {
+        margin-bottom: 1.5rem;
+      }
+      
+      .tech-icon {
+        font-size: 2rem;
+      }
+      
+      .stat-number {
+        font-size: 2rem;
+      }
+      
+      .stats-section {
+        padding: 60px 0;
+        margin: 30px 0;
+      }
+      
+      .cta-section {
+        padding: 60px 0;
+        margin: 30px 0;
+      }
+      
+      .code-example {
+        padding: 15px;
+        font-size: 0.9rem;
+        overflow-x: auto;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-section {
+        padding: 60px 0 40px 0;
+      }
+      
+      .hero-section h1 {
+        font-size: 1.6rem;
+      }
+      
+      .hero-section .lead {
+        font-size: 0.9rem;
+      }
+      
+      .tech-icon {
+        font-size: 1.5rem;
+      }
+      
+      .stat-number {
+        font-size: 1.5rem;
+      }
+      
+      .stats-section {
+        padding: 40px 0;
+        margin: 20px 0;
+      }
+      
+      .cta-section {
+        padding: 40px 0;
+        margin: 20px 0;
+      }
+      
+      .code-example {
+        padding: 10px;
+        font-size: 0.8rem;
+      }
+      
+      .navbar-brand {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>

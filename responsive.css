@@ -1,0 +1,424 @@
+/* ===== ESTILOS RESPONSIVE ADICIONALES ===== */
+
+/* Mejoras generales para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Mejorar la navegación móvil */
+  .navbar-nav {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #333 !important;
+    border-bottom: 1px solid #eee;
+    padding: 12px 15px !important;
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  /* Mejorar botones en móviles */
+  .btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+  
+  /* Ajustar espaciado de secciones */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Mejorar cards en móviles */
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    padding: 1.5rem !important;
+  }
+  
+  /* Ajustar imágenes */
+  .img-fluid {
+    border-radius: 10px;
+  }
+  
+  /* Mejorar tipografía */
+  .display-4 {
+    font-size: 2.2rem !important;
+  }
+  
+  .display-5 {
+    font-size: 1.8rem !important;
+  }
+  
+  .lead {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Ajustar estadísticas */
+  .stat-card {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Mejorar formularios */
+  .form-control {
+    font-size: 16px; /* Prevenir zoom en iOS */
+    padding: 12px 15px;
+  }
+  
+  /* Ajustar modales */
+  .modal-dialog {
+    margin: 10px;
+  }
+  
+  .modal-content {
+    border-radius: 15px;
+  }
+}
+
+/* Ajustes para dispositivos muy pequeños */
+@media (max-width: 576px) {
+  /* Reducir padding general */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  /* Ajustar títulos */
+  .display-4 {
+    font-size: 1.8rem !important;
+  }
+  
+  .display-5 {
+    font-size: 1.5rem !important;
+  }
+  
+  .lead {
+    font-size: 1rem !important;
+  }
+  
+  /* Mejorar navegación */
+  .navbar-brand {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Ajustar botones */
+  .btn-lg {
+    font-size: 0.9rem !important;
+    padding: 10px 20px !important;
+  }
+  
+  /* Ajustar cards */
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  /* Ajustar estadísticas */
+  .stat-card {
+    padding: 15px 10px;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem !important;
+  }
+  
+  /* Mejorar iconos */
+  .tech-icon,
+  .eco-icon {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Mejoras para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 95%;
+  }
+  
+  .display-4 {
+    font-size: 2.8rem !important;
+  }
+  
+  .display-5 {
+    font-size: 2.2rem !important;
+  }
+  
+  .lead {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Mejoras para pantallas grandes */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  .display-4 {
+    font-size: 3.5rem !important;
+  }
+  
+  .display-5 {
+    font-size: 2.8rem !important;
+  }
+  
+  .lead {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* Mejoras para orientación landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    padding: 40px 0 30px 0 !important;
+  }
+  
+  .navbar {
+    padding: 5px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1rem !important;
+  }
+}
+
+/* Mejoras para dispositivos de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Mejorar la nitidez de las imágenes */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Mejorar la nitidez de los iconos */
+  .tech-icon,
+  .eco-icon {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mejoras para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  /* Ajustar colores para mejor contraste en modo oscuro */
+  .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff !important;
+    border-bottom-color: #333;
+  }
+  
+  .card {
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+  
+  .form-control {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+  }
+}
+
+/* Mejoras específicas para el contenido dinámico */
+@media (max-width: 768px) {
+  /* Ajustar contenido que se carga dinámicamente */
+  #contenido-seccion {
+    padding: 15px;
+  }
+  
+  .contenido-texto {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .contenido-texto h4 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+  
+  .contenido-texto h5 {
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+  }
+  
+  .contenido-texto ul {
+    padding-left: 1.2rem;
+  }
+  
+  .contenido-texto li {
+    margin-bottom: 0.4rem;
+  }
+  
+  /* Ajustar bloques de código */
+  .code-example {
+    font-size: 0.85rem;
+    padding: 12px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Ajustar timeline */
+  .timeline-item {
+    padding-left: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .timeline-item::before {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .timeline-item::after {
+    left: 4px;
+    width: 2px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajustes adicionales para móviles muy pequeños */
+  #contenido-seccion {
+    padding: 10px;
+  }
+  
+  .contenido-texto {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .contenido-texto h4 {
+    font-size: 1.1rem;
+    margin-top: 1.3rem;
+  }
+  
+  .contenido-texto h5 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .contenido-texto ul {
+    padding-left: 1rem;
+  }
+  
+  .contenido-texto li {
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Ajustar bloques de código */
+  .code-example {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+  
+  /* Ajustar timeline */
+  .timeline-item {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item::before {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .timeline-item::after {
+    left: 3px;
+    width: 2px;
+  }
+}
+
+/* Mejoras para mejorar la experiencia de usuario */
+@media (max-width: 768px) {
+  /* Mejorar la legibilidad */
+  body {
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
+  
+  /* Mejorar el espaciado de texto */
+  p, li {
+    word-spacing: 0.5px;
+    letter-spacing: 0.2px;
+  }
+  
+  /* Mejorar la navegación táctil */
+  .btn,
+  .nav-link {
+    min-height: 44px; /* Tamaño mínimo para touch */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ajustar imágenes para evitar desbordamiento */
+  img {
+    height: auto;
+    max-width: 100%;
+    width: auto;
+  }
+  
+  /* Mejorar el contraste */
+  .text-muted {
+    color: #6c757d !important;
+  }
+  
+  /* Mejorar los enlaces */
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Mejoras para mejorar la performance */
+@media (max-width: 768px) {
+  /* Optimizar animaciones para móviles */
+  .service-card,
+  .feature-card,
+  .team-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Reducir efectos hover en móviles */
+  .service-card:hover,
+  .feature-card:hover,
+  .team-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Optimizar imágenes */
+  img {
+    will-change: transform;
+  }
+  
+  /* Mejorar el rendimiento de scroll */
+  .container,
+  .row,
+  .col {
+    will-change: auto;
+  }
+} 

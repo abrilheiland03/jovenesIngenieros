@@ -189,3 +189,451 @@ body {
   margin: 0 !important;
   border: none !important;
 }
+
+/* ===== ESTILOS RESPONSIVE ===== */
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajustes generales para móviles */
+  body {
+    padding-bottom: 20px;
+  }
+  
+  /* Contenedor principal */
+  #content {
+    margin: 1rem auto 2rem;
+    padding: 1.5rem 1rem 2rem;
+    border-radius: 15px;
+  }
+  
+  /* Títulos responsivos */
+  #content h1 {
+    font-size: 2rem;
+    padding-left: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  #content h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  #content h3 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Párrafos responsivos */
+  #content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* Botones responsivos */
+  #content .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    margin-top: 0.8rem;
+  }
+  
+  /* Listas responsivas */
+  #content ul li {
+    font-size: 1rem;
+    padding-left: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  #content ul li::before {
+    font-size: 1.1rem;
+  }
+  
+  /* Bloques informativos responsivos */
+  .info-box {
+    padding: 0.8rem 1rem;
+    margin: 1.2rem 0;
+    border-radius: 10px;
+  }
+  
+  /* Imágenes responsivas */
+  #content img {
+    margin: 1rem 0;
+    border-radius: 12px;
+  }
+  
+  /* Elementos strong responsivos */
+  #content strong {
+    padding: 0.15rem 0.4rem;
+    margin: 0.1rem 0.15rem;
+  }
+  
+  .contenido-texto strong,
+  .contenido-detallado strong {
+    padding: 0.15rem 0.4rem;
+    margin: 0.1rem 0.15rem;
+  }
+}
+
+/* Media Queries para dispositivos muy pequeños */
+@media (max-width: 576px) {
+  /* Ajustes para pantallas muy pequeñas */
+  #content {
+    margin: 0.5rem auto 1.5rem;
+    padding: 1rem 0.8rem 1.5rem;
+    border-radius: 12px;
+  }
+  
+  /* Títulos más pequeños */
+  #content h1 {
+    font-size: 1.8rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  #content h2 {
+    font-size: 1.4rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  #content h3 {
+    font-size: 1rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  /* Párrafos más pequeños */
+  #content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Botones más pequeños */
+  #content .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.6rem;
+  }
+  
+  /* Listas más pequeñas */
+  #content ul li {
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #content ul li::before {
+    font-size: 1rem;
+  }
+  
+  /* Bloques informativos más pequeños */
+  .info-box {
+    padding: 0.7rem 0.8rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  /* Elementos strong más pequeños */
+  #content strong {
+    padding: 0.1rem 0.3rem;
+    margin: 0.05rem 0.1rem;
+  }
+  
+  .contenido-texto strong,
+  .contenido-detallado strong {
+    padding: 0.1rem 0.3rem;
+    margin: 0.05rem 0.1rem;
+  }
+}
+
+/* Media Queries para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Ajustes para tablets */
+  #content {
+    margin: 1.5rem auto 3rem;
+    padding: 1.8rem 1.5rem 2.5rem;
+  }
+  
+  #content h1 {
+    font-size: 2.4rem;
+  }
+  
+  #content h2 {
+    font-size: 1.8rem;
+  }
+  
+  #content h3 {
+    font-size: 1.2rem;
+  }
+  
+  #content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 1025px) {
+  /* Ajustes para pantallas grandes */
+  #content {
+    max-width: 1000px;
+  }
+  
+  #content h1 {
+    font-size: 3rem;
+  }
+  
+  #content h2 {
+    font-size: 2.2rem;
+  }
+  
+  #content h3 {
+    font-size: 1.4rem;
+  }
+  
+  #content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilos responsive para elementos específicos de Bootstrap */
+@media (max-width: 768px) {
+  /* Navbar responsive */
+  .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 0.8rem !important;
+  }
+  
+  /* Hero sections responsive */
+  .hero-section {
+    padding: 80px 0 60px 0 !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem !important;
+  }
+  
+  .hero-section .lead {
+    font-size: 1rem !important;
+  }
+  
+  /* Cards responsive */
+  .service-card,
+  .feature-card,
+  .team-card {
+    margin-bottom: 1rem;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  /* Iconos responsive */
+  .tech-icon,
+  .eco-icon {
+    font-size: 2rem !important;
+  }
+  
+  /* Estadísticas responsive */
+  .stat-number {
+    font-size: 2rem !important;
+  }
+  
+  /* Botones responsive */
+  .btn-lg {
+    font-size: 1rem !important;
+    padding: 0.6rem 1.2rem !important;
+  }
+  
+  /* Imágenes en hero sections */
+  .hero-section img {
+    max-width: 100% !important;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Ajustes para móviles muy pequeños */
+  .navbar-brand {
+    font-size: 1rem !important;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.6rem !important;
+  }
+  
+  .hero-section {
+    padding: 60px 0 40px 0 !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  .hero-section .lead {
+    font-size: 0.9rem !important;
+  }
+  
+  .tech-icon,
+  .eco-icon {
+    font-size: 1.5rem !important;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem !important;
+  }
+  
+  .btn-lg {
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+  
+  /* Ajustes de espaciado */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .col,
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12,
+  .col-md,
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-lg,
+  .col-lg-1,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Estilos para mejorar la legibilidad en dispositivos móviles */
+@media (max-width: 768px) {
+  /* Mejorar contraste y legibilidad */
+  body {
+    font-size: 16px; /* Prevenir zoom en iOS */
+  }
+  
+  /* Ajustar espaciado de texto */
+  p, li {
+    word-spacing: 0.5px;
+    letter-spacing: 0.2px;
+  }
+  
+  /* Mejorar navegación táctil */
+  .btn,
+  .nav-link {
+    min-height: 44px; /* Tamaño mínimo para touch */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ajustar imágenes para evitar desbordamiento */
+  img {
+    height: auto;
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+/* Estilos para orientación landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    padding: 40px 0 30px 0 !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero-section .lead {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Estilos para dispositivos de alta densidad de píxeles */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Mejorar la nitidez de las imágenes */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Estilos para mejorar la accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Estilos para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+  /* Mantener los colores del tema verde pero ajustar para mejor contraste */
+  body {
+    background: linear-gradient(135deg, #1a3d2e, #2d5a3d);
+  }
+  
+  #content {
+    background-color: #1a2f1a;
+    color: #e0f2f1;
+  }
+  
+  #content h1,
+  #content h2,
+  #content h3 {
+    color: #a8e6cf;
+  }
+  
+  #content p {
+    color: #c8e6c9;
+  }
+}
