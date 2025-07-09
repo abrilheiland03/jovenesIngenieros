@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jóvenes Ingenieros - Green Software</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts para estilo moderno -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .hero-section {
+      background: linear-gradient(135deg, #17a2b8 0%, #20c997 100%);
+      color: white;
+      padding: 100px 0;
+      margin-bottom: 50px;
+    }
+    
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(23, 162, 184, 0.3);
+    }
+    
+    .tech-icon {
+      font-size: 3rem;
+      color: #17a2b8;
+      margin-bottom: 1rem;
+    }
+    
+    .stats-section {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+      margin: 50px 0;
+    }
+    
+    .stat-card {
+      text-align: center;
+      padding: 30px 20px;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #17a2b8;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #20c997 0%, #28a745 100%);
+      color: white;
+      padding: 80px 0;
+      margin: 50px 0;
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background-color: #17a2b8;
+      border-radius: 50%;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 12px;
+      width: 2px;
+      height: calc(100% + 18px);
+      background-color: #17a2b8;
+    }
+    
+    .timeline-item:last-child::after {
+      display: none;
+    }
+    
+    .code-example {
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar principal -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-info shadow-sm fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3" href="../index.html">Jóvenes Ingenieros</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavContent" aria-controls="mainNavContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+        <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#exploremos">Exploremos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#documentos">Documentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html">Volver</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section" id="inicio">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">Green Software</h1>
+        <p class="lead mb-4">Descubre cómo desarrollar software que no solo sea eficiente, sino también responsable con el medio ambiente.</p>
+        <p class="mb-4">El Green Software es la práctica de desarrollar aplicaciones y sistemas que minimicen su impacto ambiental, desde el diseño hasta la implementación y mantenimiento.</p>
+        <a href="#exploremos" class="btn btn-light btn-lg me-3">Explorar Más</a>
+        <a href="#documentos" class="btn btn-outline-light btn-lg">Descargar Recursos</a>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="./greenSoftware.jpg" alt="Green Software" class="img-fluid rounded-3 shadow-lg" style="max-width: 500px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Características Principales -->
+<section class="container my-5">
+  <div class="row text-center mb-5">
+    <div class="col-12">
+      <h2 class="display-5 fw-bold text-info mb-4">¿Por qué Green Software?</h2>
+      <p class="lead">El desarrollo de software sustentable abarca múltiples dimensiones que trabajan en conjunto para reducir la huella de carbono digital.</p>
+    </div>
+  </div>
+  
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center p-4">
+          <div class="tech-icon">💻</div>
+          <h4 class="card-title">Eficiencia Energética</h4>
+          <p class="card-text">Optimizar el código y la arquitectura para reducir el consumo energético de las aplicaciones.</p>
+          <ul class="list-unstyled text-start">
+            <li>✓ Algoritmos optimizados</li>
+            <li>✓ Código eficiente</li>
+            <li>✓ Arquitecturas escalables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center p-4">
+          <div class="tech-icon">🌐</div>
+          <h4 class="card-title">Infraestructura Verde</h4>
+          <p class="card-text">Utilizar servidores y servicios cloud que funcionen con energías renovables.</p>
+          <ul class="list-unstyled text-start">
+            <li>✓ Cloud sustentable</li>
+            <li>✓ Servidores eficientes</li>
+            <li>✓ Energías renovables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="card feature-card h-100 shadow-sm">
+        <div class="card-body text-center p-4">
+          <div class="tech-icon">📱</div>
+          <h4 class="card-title">Hardware Optimizado</h4>
+          <p class="card-text">Desarrollar aplicaciones que aprovechen al máximo los recursos del dispositivo.</p>
+          <ul class="list-unstyled text-start">
+            <li>✓ Menor uso de CPU</li>
+            <li>✓ Gestión de memoria</li>
+            <li>✓ Optimización de batería</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Estadísticas -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="display-5 fw-bold text-info">Impacto del Software</h2>
+        <p class="lead">Cifras que demuestran la importancia del Green Software</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-3">
+        <div class="stat-card">
+          <div class="stat-number">4%</div>
+          <p class="text-muted">De las emisiones globales de CO₂ provienen del sector tecnológico</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card">
+          <div class="stat-number">50%</div>
+          <p class="text-muted">Más eficiencia energética con código optimizado</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card">
+          <div class="stat-number">80%</div>
+          <p class="text-muted">De la energía de un servidor se pierde en refrigeración</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card">
+          <div class="stat-number">2030</div>
+          <p class="text-muted">Meta para neutralidad de carbono en tecnología</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Exploremos -->
+<section class="container my-5" id="exploremos">
+  <div class="row text-center mb-5">
+    <div class="col-12">
+      <h2 class="display-5 fw-bold text-info">Exploremos Green Software</h2>
+      <p class="lead">Descubre las diferentes dimensiones del desarrollo de software sustentable</p>
+    </div>
+  </div>
+  
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Qué es?</h5>
+          <p class="card-text">Descubrí el significado y los principios fundamentales del Green Software.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('es')">Ver más</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Por qué?</h5>
+          <p class="card-text">Entendé la importancia de desarrollar software sustentable.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('pq')">Ver más</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Para qué?</h5>
+          <p class="card-text">Conocé los objetivos y beneficios del Green Software.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('pa')">Ver más</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Quién?</h5>
+          <p class="card-text">Descubrí quiénes son los actores clave en el Green Software.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('qu')">Ver más</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Cuándo?</h5>
+          <p class="card-text">Conocé la evolución histórica del Green Software.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('cua')">Ver más</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Dónde?</h5>
+          <p class="card-text">Explorá dónde se aplican las prácticas de Green Software.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('do')">Ver más</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Cómo?</h5>
+          <p class="card-text">Aprendé las metodologías y prácticas de Green Software.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('co')">Ver más</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Con qué?</h5>
+          <p class="card-text">Descubrí las herramientas y tecnologías para Green Software.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('cn')">Ver más</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6 col-lg-4">
+      <div class="card feature-card h-100">
+        <div class="card-body text-center p-4">
+          <h5 class="card-title">¿Cuánto?</h5>
+          <p class="card-text">Entendé el impacto y la medición del Green Software.</p>
+          <button class="btn btn-info" onclick="mostrarSeccion('cu')">Ver más</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Ejemplos Prácticos -->
+<section class="container my-5">
+  <div class="row text-center mb-5">
+    <div class="col-12">
+      <h2 class="display-5 fw-bold text-info">Ejemplos Prácticos</h2>
+      <p class="lead">Casos reales de implementación de Green Software</p>
+    </div>
+  </div>
+  
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card feature-card h-100">
+        <div class="card-body p-4">
+          <h5 class="card-title">Optimización de Algoritmos</h5>
+          <p class="card-text">Ejemplo de cómo optimizar un algoritmo para reducir el consumo energético:</p>
+          <div class="code-example">
+            <small class="text-danger fw-bold">❌ MALA PRÁCTICA: O(n²) - Alto consumo energético</small><br>
+            <code>// Búsqueda lineal en array desordenado<br>
+            function findElement(arr, target) {<br>
+            &nbsp;&nbsp;for (let i = 0; i < arr.length; i++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;for (let j = 0; j < arr.length; j++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (arr[i] === target && arr[j] === target) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true; // Doble verificación innecesaria<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;return false;<br>
+            }<br>
+            // Consumo: ~1000ms para 10,000 elementos</code>
+          </div>
+          <div class="code-example">
+            <small class="text-success fw-bold">✅ BUENA PRÁCTICA: O(n) - Bajo consumo energético</small><br>
+            <code>// Búsqueda optimizada con early return<br>
+            function findElement(arr, target) {<br>
+            &nbsp;&nbsp;for (let i = 0; i < arr.length; i++) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if (arr[i] === target) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return true; // Early return<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;return false;<br>
+            }<br>
+            // Consumo: ~5ms para 10,000 elementos</code>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="card feature-card h-100">
+        <div class="card-body p-4">
+          <h5 class="card-title">Gestión de Memoria</h5>
+          <p class="card-text">Buenas prácticas para el manejo eficiente de memoria:</p>
+          <div class="code-example">
+            <small class="text-danger fw-bold">❌ MALA PRÁCTICA: Memory Leaks y uso excesivo</small><br>
+            <code>// Cargando todas las imágenes al inicio<br>
+            const images = [];<br>
+            for (let i = 0; i < 1000; i++) {<br>
+            &nbsp;&nbsp;images.push(new Image());<br>
+            &nbsp;&nbsp;images[i].src = `image${i}.jpg`; // Carga inmediata<br>
+            &nbsp;&nbsp;document.body.appendChild(images[i]);<br>
+            }<br>
+            // Memoria: ~500MB, Tiempo: 15 segundos</code>
+          </div>
+          <div class="code-example">
+            <small class="text-success fw-bold">✅ BUENA PRÁCTICA: Lazy Loading y gestión eficiente</small><br>
+            <code>// Carga bajo demanda con Intersection Observer<br>
+            const imageObserver = new IntersectionObserver((entries) => {<br>
+            &nbsp;&nbsp;entries.forEach(entry => {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if (entry.isIntersecting) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const img = entry.target;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;img.src = img.dataset.src; // Carga solo cuando es visible<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;imageObserver.unobserve(img);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;});<br>
+            });<br>
+            // Memoria: ~50MB, Tiempo: 2 segundos</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Documentos -->
+<section class="container my-5" id="documentos">
+  <div class="row text-center mb-5">
+    <div class="col-12">
+      <h2 class="display-5 fw-bold text-info">Recursos para Descargar</h2>
+      <p class="lead">Documentos y materiales educativos sobre Green Software</p>
+    </div>
+  </div>
+  
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg">
+        <div class="card-body text-center p-5">
+          <img src="./portada.png" alt="Portada PDF Green Software" class="img-fluid mb-4" style="max-width: 300px; border-radius: 12px;">
+          <h4 class="card-title mb-3">Guía Completa de Green Software</h4>
+          <p class="card-text mb-4">Descarga nuestro documento completo con información detallada sobre Green Software.</p>
+          <a href="Green Software - Jovenes Ingenieros.pdf" class="btn btn-info btn-lg" download>
+            <i class="bi bi-download"></i> Descargar PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold mb-4">¿Listo para Desarrollar Software Verde?</h2>
+    <p class="lead mb-4">Cada línea de código cuenta. Comienza hoy mismo con prácticas de desarrollo sustentable.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="timeline-item">
+          <h5>💻 Optimiza tu código</h5>
+          <p>Escribe algoritmos eficientes y evita operaciones innecesarias.</p>
+        </div>
+        <div class="timeline-item">
+          <h5>🌐 Elige infraestructura verde</h5>
+          <p>Utiliza servicios cloud que funcionen con energías renovables.</p>
+        </div>
+        <div class="timeline-item">
+          <h5>📱 Optimiza para dispositivos</h5>
+          <p>Desarrolla aplicaciones que consuman menos batería y recursos.</p>
+        </div>
+        <div class="timeline-item">
+          <h5>🔄 Implementa CI/CD verde</h5>
+          <p>Automatiza procesos de desarrollo con prácticas sustentables.</p>
+        </div>
+        <div class="timeline-item">
+          <h5>📊 Monitorea el impacto</h5>
+          <p>Mide y optimiza el consumo energético de tus aplicaciones.</p>
+        </div>
+      </div>
+    </div>
+    <a href="../index.html" class="btn btn-light btn-lg mt-4">Volver al Inicio</a>
+  </div>
+</section>
+
+<footer class="footer bg-info text-white text-center py-4">
+  <div class="container">
+    <p class="mb-0">&copy; 2025 Jóvenes Ingenieros - Todos los derechos reservados</p>
+    <p class="mb-0">Comprometidos con el desarrollo de software sustentable</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle (Popper + Bootstrap JS) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="sustentabilidad.js"></script>
+<script src="greensoftware.js"></script>
+<script src="script.js"></script>
+
+
+
+</body>
+</html> 
