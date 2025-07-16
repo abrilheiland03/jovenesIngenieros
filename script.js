@@ -147,7 +147,14 @@ function generarHtmlRecursivo(obj) {
   let html = '';
   for (const key in obj) {
     if (typeof obj[key] === 'string') {
-      html += `<h3 class="mt-4">${key}</h3>${obj[key]}`;
+      // Si es una imagen
+      if (obj[key].match(/\.(png|jpg|jpeg|gif)$/i)) {
+        // Corregir la ruta si contiene 'sustentabilidad/'
+        let rutaImg = obj[key].replace(/^sustentabilidad\//, '');
+        html += `<h3 class="mt-4">${key}</h3><img src="${rutaImg}" alt="${key}" class="img-fluid mb-3" style="max-width: 100%; height: auto;" />`;
+      } else {
+        html += `<h3 class="mt-4">${key}</h3>${obj[key]}`;
+      }
     } else if (typeof obj[key] === 'object') {
       html += `<h2 class="mt-5">${key}</h2>`;
       html += generarHtmlRecursivo(obj[key]);
