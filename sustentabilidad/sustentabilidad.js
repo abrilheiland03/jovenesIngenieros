@@ -229,14 +229,35 @@ function mostrarContenidoSeccion(seccion) {
       // Agregar el contenido de cada subsección
       for (const [key, value] of Object.entries(seccionData)) {
         if (typeof value === 'string') {
-          html += `
-            <div class="mb-4">
-              <h4 class="text-success mb-3">${key}</h4>
-              <div class="contenido-texto">
-                ${value}
+          if (value.match(/\.(png|jpg|jpeg|gif)$/i)) {
+            // Corregir la ruta si contiene 'sustentabilidad/'
+            let rutaImg = value.replace(/^sustentabilidad\//, '');
+            if (key === '') {
+              html += `
+                <div class="mb-4 text-center">
+                  <img src="${rutaImg}" alt="Imagen" class="img-fluid mb-3" style="max-width: 100%; height: auto;" />
+                </div>
+              `;
+            } else {
+              html += `
+                <div class="mb-4">
+                  <h4 class="text-success mb-3">${key}</h4>
+                  <div class="contenido-texto">
+                    <img src="${rutaImg}" alt="${key}" class="img-fluid mb-3" style="max-width: 100%; height: auto;" />
+                  </div>
+                </div>
+              `;
+            }
+          } else {
+            html += `
+              <div class="mb-4">
+                <h4 class="text-success mb-3">${key}</h4>
+                <div class="contenido-texto">
+                  ${value}
+                </div>
               </div>
-            </div>
-          `;
+            `;
+          }
         } else if (typeof value === 'object') {
           html += `
             <div class="mb-4">
