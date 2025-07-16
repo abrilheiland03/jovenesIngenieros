@@ -13,8 +13,8 @@
   },
   "qu": {
     "¿Quiénes implementan Green Software?": "La sostenibilidad digital es una tarea colectiva y transversal. En el ecosistema del Green Software, la responsabilidad se distribuye entre múltiples actores: desde CEOs y líderes organizacionales, que definen políticas estratégicas, hasta desarrolladores, operadores, usuarios finales y ciudadanos digitales. Cada rol tiene el potencial de generar impacto positivo mediante decisiones conscientes y prácticas responsables. La transformación sostenible no se alcanza con acciones individuales aisladas, sino mediante la coordinación efectiva y el compromiso común a lo largo de todo el ciclo de vida del software. Este enfoque colaborativo exige educación, participación y alineación entre quienes diseñan, desarrollan, implementan, regulan y utilizan soluciones tecnológicas. Solo así es posible construir un entorno digital verdaderamente respetuoso con el medio ambiente.",
-    "": "green-software/img-green/quien.png"
-   },
+    "": "green-software/img green/quien.png"
+  },
   "cua": {
     "¿Cuándo se implementa Green Software?": "El Green Software es un compromiso integral que abarca todo el ciclo de vida del software, iniciando desde la fase de diseño y planificación, donde se establecen las bases para la eficiencia futura. Continúa durante el desarrollo y despliegue, con decisiones técnicas clave sobre código, infraestructura y arquitectura. Finalmente, se mantiene en el post-lanzamiento mediante monitoreo continuo, optimización y gestión del fin de vida. Esta visión transversal y proactiva permite implementar prácticas sostenibles en cada etapa, asegurando una reducción activa del impacto ambiental.",
     "": "green-software/img green/cuando.png"
