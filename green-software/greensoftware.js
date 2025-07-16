@@ -112,32 +112,58 @@ function mostrarContenidoSeccion(seccion, contenidoSeccion) {
   // Agregar el contenido de cada subsección
   for (const [key, value] of Object.entries(contenidoSeccion)) {
     if (typeof value === 'string') {
-      html += `
-        <div class="mb-4">
-          <h4 class="text-info mb-3">${key}</h4>
-          <div class="contenido-texto">
-            ${value}
+      // Si el valor parece ser una ruta de imagen, mostrar la imagen
+      if (value.match(/\.(png|jpg|jpeg|gif)$/i)) {
+        // Corregir la ruta si contiene 'green-software/'
+        let rutaImg = value.replace(/^green-software\//, '');
+        html += `
+          <div class="mb-4">
+            <h4 class="text-info mb-3">${key}</h4>
+            <div class="contenido-texto">
+              <img src="${rutaImg}" alt="${key}" class="img-fluid mb-3" style="max-width: 100%; height: auto;" />
+            </div>
           </div>
-        </div>
-      `;
+        `;
+      } else {
+        html += `
+          <div class="mb-4">
+            <h4 class="text-info mb-3">${key}</h4>
+            <div class="contenido-texto">
+              ${value}
+            </div>
+          </div>
+        `;
+      }
     } else if (typeof value === 'object') {
       html += `
         <div class="mb-4">
           <h4 class="text-info mb-3">${key}</h4>
           <div class="contenido-texto">
       `;
-      
       for (const [subKey, subValue] of Object.entries(value)) {
-        html += `
-          <div class="mb-3">
-            <h5 class="text-success">${subKey}</h5>
-            <div class="contenido-texto">
-              ${subValue}
+        // Si el subvalor es una imagen
+        if (typeof subValue === 'string' && subValue.match(/\.(png|jpg|jpeg|gif)$/i)) {
+          // Corregir la ruta si contiene 'green-software/'
+          let rutaImg = subValue.replace(/^green-software\//, '');
+          html += `
+            <div class="mb-3">
+              <h5 class="text-success">${subKey}</h5>
+              <div class="contenido-texto">
+                <img src="${rutaImg}" alt="${subKey}" class="img-fluid mb-3" style="max-width: 100%; height: auto;" />
+              </div>
             </div>
-          </div>
-        `;
+          `;
+        } else {
+          html += `
+            <div class="mb-3">
+              <h5 class="text-success">${subKey}</h5>
+              <div class="contenido-texto">
+                ${subValue}
+              </div>
+            </div>
+          `;
+        }
       }
-      
       html += `
           </div>
         </div>
@@ -253,3 +279,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener('DOMContentLoaded', function() {
   cargarContenidoJSON();
 }); 
+window.mostrarSeccion = mostrarSeccion; 
